@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="HXFStringsTool" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="HXFStringsTool" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About HXFStringsTool" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Quit HXFStringsTool" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="File" id="dMs-cI-mzQ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Edit" id="5QF-Oa-p0T">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Format" id="jxT-CU-nIS">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="View" id="H8h-7b-M4v">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Window" id="aUF-d1-5bR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                            <menuItem title="Help" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="1009" y="186" width="450" height="250"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28" y="213"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="467" height="245"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MUb-2U-mTI">
+                                <rect key="frame" x="-3" y="-3" width="473" height="251"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" imageFrameStyle="button" image="bb" id="78Z-nu-lcP"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qey-fG-Z7f">
+                                <rect key="frame" x="163" y="202" width="141" height="23"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="词条转换器 V1.0" id="y41-rE-5au">
+                                    <font key="font" metaFont="system" size="19"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kFZ-37-F21">
+                                <rect key="frame" x="98" y="53" width="109" height="32"/>
+                                <buttonCell key="cell" type="push" title="Choose file" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qee-U4-j7b">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="selectFilePressed:" target="XfG-lQ-9wD" id="12s-VZ-MsO"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Dw6-nF-6of">
+                                <rect key="frame" x="281" y="53" width="91" height="32"/>
+                                <buttonCell key="cell" type="push" title="Transfer" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="a7V-fY-EAv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="transferPressed:" target="XfG-lQ-9wD" id="OKZ-LF-tFa"/>
+                                </connections>
+                            </button>
+                            <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIT-YP-qIe">
+                                <rect key="frame" x="104" y="134" width="260" height="18"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="cellSize" width="100" height="18"/>
+                                <size key="intercellSpacing" width="60" height="2"/>
+                                <buttonCell key="prototype" type="radio" title="Radio" imagePosition="left" alignment="left" inset="2" id="mCx-VI-19x">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <cells>
+                                    <column>
+                                        <buttonCell type="radio" title="xls to strings" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" tag="1" inset="2" id="tYj-YR-X9f">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </column>
+                                    <column>
+                                        <buttonCell type="radio" title="strings to xls" imagePosition="left" alignment="left" inset="2" id="cxH-2x-ec1">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </column>
+                                </cells>
+                                <connections>
+                                    <action selector="radioPressed:" target="XfG-lQ-9wD" id="YtS-ja-RgJ"/>
+                                </connections>
+                            </matrix>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="kIT-YP-qIe" firstAttribute="centerY" secondItem="MUb-2U-mTI" secondAttribute="centerY" constant="-20" id="4dV-xE-DfN"/>
+                            <constraint firstItem="Dw6-nF-6of" firstAttribute="top" secondItem="kFZ-37-F21" secondAttribute="top" id="C1V-gz-lnO"/>
+                            <constraint firstItem="MUb-2U-mTI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="JsI-y2-Hq6"/>
+                            <constraint firstAttribute="bottom" secondItem="MUb-2U-mTI" secondAttribute="bottom" id="KiT-LS-c8F"/>
+                            <constraint firstItem="MUb-2U-mTI" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="Q16-sv-D4p"/>
+                            <constraint firstAttribute="centerX" secondItem="qey-fG-Z7f" secondAttribute="centerX" id="TYm-y4-SVf"/>
+                            <constraint firstItem="kIT-YP-qIe" firstAttribute="centerX" secondItem="MUb-2U-mTI" secondAttribute="centerX" id="Z1p-yi-qoP"/>
+                            <constraint firstItem="kFZ-37-F21" firstAttribute="leading" secondItem="kIT-YP-qIe" secondAttribute="leading" id="bQT-i6-hHS"/>
+                            <constraint firstAttribute="bottom" secondItem="kFZ-37-F21" secondAttribute="bottom" constant="60" id="sus-n5-5kT"/>
+                            <constraint firstAttribute="trailing" secondItem="MUb-2U-mTI" secondAttribute="trailing" id="vLC-eh-s4U"/>
+                            <constraint firstItem="Dw6-nF-6of" firstAttribute="trailing" secondItem="kIT-YP-qIe" secondAttribute="trailing" constant="2" id="xK0-rx-4VV"/>
+                            <constraint firstItem="qey-fG-Z7f" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="xy0-8n-f3A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="radio" destination="kIT-YP-qIe" id="Ibd-e9-Qoq"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-24.5" y="523"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bb" width="353" height="220"/>
+    </resources>
+</document>
