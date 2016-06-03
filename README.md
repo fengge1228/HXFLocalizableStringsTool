@@ -1,2 +1,2 @@
 # HXFLocalizableStringsTool
-A Mac App can translate localized.Strings and Microsoft xls file to each other.
+A Mac App can translate localizable.strings and Microsoft xls file to each other.
